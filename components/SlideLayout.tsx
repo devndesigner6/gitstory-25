@@ -5,9 +5,15 @@ interface SlideLayoutProps {
   children: React.ReactNode;
   gradientStart?: string;
   gradientEnd?: string;
+  variant?: 'default' | 'minimal' | 'bold';
 }
 
-export const SlideLayout: React.FC<SlideLayoutProps> = ({ children, gradientStart = "#3B82F6", gradientEnd = "#8B5CF6" }) => {
+export const SlideLayout: React.FC<SlideLayoutProps> = ({ 
+  children, 
+  gradientStart = "#3B82F6", 
+  gradientEnd = "#8B5CF6",
+  variant = 'default'
+}) => {
   return (
     <motion.div
       className="absolute inset-0 w-full h-full flex flex-col items-center justify-center overflow-hidden bg-black"
