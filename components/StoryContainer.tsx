@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { GitStoryData, SlideType } from '../types';
 import { SLIDE_DURATION_MS } from '../constants';
