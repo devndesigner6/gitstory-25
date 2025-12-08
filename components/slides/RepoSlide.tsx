@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SlideLayout } from '../SlideLayout';
 import { GitStoryData } from '../../types';
 import { TextReveal } from '../TextReveal';
 import { motion } from 'framer-motion';
-import { Star, GitCommit } from 'lucide-react';
+import { Star, GitCommit, ExternalLink } from 'lucide-react';
 
-export const RepoSlide: React.FC<{ data: GitStoryData }> = ({ data }) => {
+interface RepoSlideProps {
+  data: GitStoryData;
+  enableLinks?: boolean;
+}
+
+export const RepoSlide: React.FC<RepoSlideProps> = ({ data, enableLinks = true }) => {
+  const [hoveredRepo, setHoveredRepo] = useState<string | null>(null);
+  
   return (
     <SlideLayout gradientStart="#1e293b" gradientEnd="#0f172a">
       <div className="flex-1 flex flex-col items-center justify-center perspective-1000">
