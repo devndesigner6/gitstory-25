@@ -4,6 +4,9 @@
 
 ### *Your Year in Code — Cinematic Wrapped*
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/devndesigner6/gitstory-25?style=social)](https://github.com/devndesigner6/gitstory-25)
+
 <p align="center">
   <img src="https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
