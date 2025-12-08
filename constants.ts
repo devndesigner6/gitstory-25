@@ -1,6 +1,8 @@
 import { GitStoryData } from "./types";
 
 export const SLIDE_DURATION_MS = 6000; // 6 seconds per slide
+export const ANIMATION_DURATION = 500;
+export const TRANSITION_DELAY = 300;
 
 const generateYearlyData = () => {
   const data = [];
