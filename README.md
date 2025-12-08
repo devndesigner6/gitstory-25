@@ -48,6 +48,15 @@ Experience your year through **10 cinematic slides**:
 | # | Slide | What It Shows |
 |---|-------|---------------|
 | 1 | **Title** | Your username & avatar with dramatic reveal |
+
+## 🚀 Features
+
+- **Real-time GitHub Data**: Fetches your actual contribution graph and stats
+- **Smooth Animations**: Powered by Framer Motion for cinematic transitions
+- **Responsive Design**: Works seamlessly on all screen sizes
+- **Dark Mode**: Eye-friendly dark theme throughout
+- **Keyboard Controls**: Navigate slides with arrow keys
+- **Auto-play Mode**: Auto-advances through slides with customizable timing
 | 2 | **Velocity** | Animated area chart of daily commits |
 | 3 | **Grid** | Full-year contribution heatmap |
 | 4 | **Composition** | Breakdown: Commits vs PRs vs Issues vs Reviews |
