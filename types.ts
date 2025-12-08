@@ -12,6 +12,8 @@ export interface Repository {
   language: string;
   topics: string[]; // Added topics for AI detection
   url: string;
+  lastUpdated?: Date;
+  isArchived?: boolean;
 }
 
 export interface ProductivityData {
