@@ -6,6 +6,8 @@ interface TextRevealProps {
   className?: string;
   delay?: number;
   highlight?: string; // Word to highlight in yellow/blue
+  duration?: number;
+  staggerChildren?: number;
 }
 
 export const TextReveal: React.FC<TextRevealProps> = ({ text, className = "", delay = 0, highlight }) => {
