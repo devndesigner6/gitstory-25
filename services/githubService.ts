@@ -5,6 +5,10 @@ const GITHUB_API_BASE = "https://api.github.com";
 // Third-party API to get contribution graph
 const CONTRIB_API = "https://github-contributions-api.jogruber.de/v4";
 
+// Cache configuration
+const CACHE_TTL_MS = 3600000; // 1 hour
+let lastFetchTime = 0;
+
 // Helper to determine time of day persona
 const getProductivityTime = (hour: number) => {
   if (hour >= 5 && hour < 12) return "Morning";
