@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { SlideLayout } from '../SlideLayout';
 import { GitStoryData } from '../../types';
 import { TextReveal } from '../TextReveal';
 import { motion } from 'framer-motion';
 
-export const LanguagesSlide: React.FC<{ data: GitStoryData }> = ({ data }) => {
-  const topLang = data.topLanguages[0];
+interface LanguagesSlideProps {
+  data: GitStoryData;
+  maxLanguages?: number;
+}
 
-  return (
-    <SlideLayout gradientStart={topLang.color} gradientEnd="#000000">
-      <div className="flex-1 flex flex-col justify-center relative">
-        
-        {/* Floating Orbs */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
+export const LanguagesSlide: React.FC<LanguagesSlideProps> = ({ data, maxLanguages = 5 }) => {
+  const topLang = data.topLanguages[0];
+  const displayedLanguages = useMemo(() => data.topLanguages.slice(0, maxLanguages), [data, maxLanguages]);
           {data.topLanguages.map((lang, i) => (
             <motion.div
               key={lang.name}
