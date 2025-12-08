@@ -5,7 +5,12 @@ import { SlideLayout } from '../SlideLayout';
 import { GitStoryData } from '../../types';
 import { TextReveal } from '../TextReveal';
 
-export const TitleSlide: React.FC<{ data: GitStoryData }> = ({ data }) => {
+interface TitleSlideProps {
+  data: GitStoryData;
+  showSubtitle?: boolean;
+}
+
+export const TitleSlide: React.FC<TitleSlideProps> = ({ data, showSubtitle = true }) => {
   return (
     <SlideLayout gradientStart="#3B82F6" gradientEnd="#000000">
       <div className="flex-1 flex flex-col items-center justify-center text-center">
