@@ -16,7 +16,6 @@ export default defineConfig(({ mode }) => {
 					output: {
 						manualChunks: {
 							vendor: ['react', 'react-dom', 'framer-motion'],
-							slides: ['./src/components/slides'],
 							charts: ['recharts'],
 						},
 					},
