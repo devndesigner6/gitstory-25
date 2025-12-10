@@ -123,10 +123,16 @@ const App: React.FC = () => {
 
   if (showStory && storyData) {
     return (
-      <>
-        <StoryContainer data={storyData} onComplete={() => setShowStory(false)} />
-        <ShareExport data={storyData} />
-      </>
+      <StoryContainer data={storyData} onComplete={() => setShowStory(false)}>
+        {(pauseControl) => (
+          <ShareExport 
+            data={storyData} 
+            onPanelToggle={pauseControl.setPaused}
+            onExportStart={() => pauseControl.setPaused(true)}
+            onExportComplete={() => pauseControl.setPaused(false)}
+          />
+        )}
+      </StoryContainer>
     );
   }
 

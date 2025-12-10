@@ -18,12 +18,14 @@ interface ShareExportProps {
   data: GitStoryData;
   onExportStart?: () => void;
   onExportComplete?: () => void;
+  onPanelToggle?: (isOpen: boolean) => void;
 }
 
 export const ShareExport: React.FC<ShareExportProps> = ({
   data,
   onExportStart,
   onExportComplete,
+  onPanelToggle,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'export' | 'share'>('export');
@@ -33,6 +35,11 @@ export const ShareExport: React.FC<ShareExportProps> = ({
 
   const baseUrl = generateShareableLink(data.username);
   const shareText = generateShareText(data, 'twitter');
+
+  const togglePanel = (open: boolean) => {
+    setIsOpen(open);
+    onPanelToggle?.(open);
+  };
 
   const handleExport = async (format: 'png' | 'pdf' | 'jpg') => {
     setIsExporting(true);
@@ -231,7 +238,7 @@ export const ShareExport: React.FC<ShareExportProps> = ({
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => togglePanel(!isOpen)}
         className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-shadow"
       >
         {isOpen ? <span className="text-xl">×</span> : <Share2 className="w-6 h-6" />}

@@ -18,9 +18,10 @@ import { X } from 'lucide-react';
 interface StoryContainerProps {
   data: GitStoryData;
   onComplete: () => void;
+  children?: (pauseControl: { setPaused: (paused: boolean) => void }) => React.ReactNode;
 }
 
-export const StoryContainer: React.FC<StoryContainerProps> = ({ data, onComplete }) => {
+export const StoryContainer: React.FC<StoryContainerProps> = ({ data, onComplete, children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const totalSlides = 11;
@@ -184,6 +185,9 @@ export const StoryContainer: React.FC<StoryContainerProps> = ({ data, onComplete
           {renderSlide()}
         </div>
       </AnimatePresence>
+
+      {/* Share/Export Controls */}
+      {children?.({ setPaused: setIsPaused })}
     </div>
   );
 };
