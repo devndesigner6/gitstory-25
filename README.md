@@ -1,36 +1,291 @@
-# GitStory 2025
+<div align="center">
 
-Turn your GitHub contributions into a cinematic, story-style recap for 2025. Eleven animated slides, real-time GitHub data, and a shareable poster let you relive your coding year in minutes.
+# 🎬 GitStory 2025
 
-![GitStory](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-4.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.x-FF0055?style=for-the-badge&logo=framer&logoColor=white)
+### *Your Year in Code — Cinematic Wrapped*
 
-## Features
-- Eleven cinematic slides: velocity, grid, composition, routine, productivity, community, languages, top repos, and poster finale
-- Live GitHub data with optional token (private/org repos, 5000 req/hr)
-- Smart scoring for repos and languages with recent-activity weighting
-- Archetypes (Night Owl, Weekend Warrior, Reviewer, Planner, etc.)
-- Keyboard, touch, and hold-to-pause controls
-- Poster export and sharing hooks
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind-4.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Framer_Motion-12.x-FF0055?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+</p>
 
-## Quick Start
+<p align="center">
+  <strong>Transform your GitHub contributions into a stunning, Instagram Stories-style cinematic experience.</strong>
+</p>
+
+
+---
+
+</div>
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🎥 **Cinematic Experience** | 11 beautifully animated slides with Instagram Stories-like navigation |
+| 📊 **Live GitHub Data** | Real-time stats fetched from GitHub API — commits, PRs, issues, reviews |
+| 🧬 **Smart Archetypes** | AI-determined coding personas: *Night Owl*, *Weekend Warrior*, *Grid Painter*, and more |
+| 📈 **Velocity Charts** | Animated contribution charts powered by Recharts |
+| 🗓️ **Contribution Grid** | Visual heatmap of your 2025 coding activity |
+| 🏆 **Top 5 Repositories** | Showcase your best projects with smart ranking |
+| 🎨 **Language Breakdown** | Beautiful visualization of your tech stack (55+ languages!) |
+| 📱 **Mobile-First** | Touch gestures: tap left/right to navigate, hold to pause |
+| 🔐 **GitHub Token Support** | Optional authentication for private repos & org repos |
+| 🖼️ **Poster Export** | Download a shareable movie-poster style summary |
+| 🎊 **Confetti Celebration** | End your story with style |
+
+---
+
+## 🆕 What's New
+
+### 🚀 Optimized API (v2.0)
+- **With Token:** Only **4 API calls** (GraphQL bundles contributions + PR/Issue/Review counts!)
+- **Without Token:** 7 API calls (REST fallback)
+- **43% fewer API calls** when authenticated!
+
+### Smart Repository Scoring
+Projects are now ranked using **12 factors** instead of just stars:
+- ⭐ Stars & Forks (logarithmic scale)
+- 📅 Recent activity in 2025 (time-decay bonus)
+- ✨ Original work (not forks)
+- 📝 Description & Topics
+- 💻 Primary language
+- 📦 Repository size
+- 🐛 Open issues (activity indicator)
+- 🆕 Created in 2025 bonus
+- 👀 Watchers
+- 📦 Archived penalty
+
+### Smart Language Scoring
+- 🚫 **Excludes forks** (your own code only)
+- 📅 **2025 activity bonus** (recent work counts more)
+- 🎯 **Diversity bonus** (3+ repos = extra weight)
+
+### GitHub Token Integration
+- 🔐 Optional token input with validation
+- ✅ "Connected as @username" badge with avatar
+- 🏢 Access to **organization repositories**
+- 🔒 **Private contributions** via GraphQL API
+- 📈 5000 API calls/hour (vs 60 without token)
+
+### Better Error Handling
+- 🟠 Rate limit errors with reset time
+- 🟡 User not found suggestions
+- 🔴 Authentication error guidance
+- 🔄 Retry button for rate limits
+
+---
+
+## 🎬 Slides
+
+Experience your year through **11 cinematic slides**:
+
+| # | Slide | What It Shows |
+|---|-------|---------------|
+| 1 | **Title** | Your username & avatar with dramatic reveal |
+| 2 | **Velocity** | Animated area chart of daily commits |
+| 3 | **Grid** | Full-year contribution heatmap |
+| 4 | **Composition** | Breakdown: Commits vs PRs vs Issues vs Reviews |
+| 5 | **Routine** | Your busiest day of the week |
+| 6 | **Productivity** | Peak coding hours & time-of-day persona |
+| 7 | **Community** | Followers, stars, and repo count |
+| 8 | **Languages** | Top 3 programming languages |
+| 9 | **Top 5 Repos** | Your best repositories ranked by score |
+| 10 | **Top Repo** | Spotlight on your #1 repository |
+| 11 | **Poster** | 🎬 Downloadable movie poster with confetti! |
+
+---
+
+## 🧬 Archetypes
+
+Based on your **behavior patterns**, you'll be assigned one of these personas:
+
+| Archetype | Criteria |
+|-----------|----------|
+| 🔀 **The Pull Request Pro** | Opens many PRs (>20% of activity) |
+| 👀 **The Reviewer** | Frequent code reviewer (>10% of activity) |
+| 🌙 **The Night Owl** | Peak activity after 10 PM |
+| 🌅 **The Early Bird** | Peak activity before noon |
+| 🗓️ **The Weekend Warrior** | >35% commits on weekends |
+| 🎨 **The Grid Painter** | 1200+ commits (green squares everywhere!) |
+| ⚡ **The Consistent** | 400+ commits, steady contributor |
+| 📋 **The Planner** | High issue-to-commit ratio |
+| ⭐ **The Community Star** | 500+ followers or 1000+ total stars |
+| 🔧 **The Tinkerer** | Default — you're exploring! |
+
+---
+
+## ⚡ Quick Start
+
 ```bash
+# Clone the repository
 git clone https://github.com/devndesigner6/gitstory-25.git
 cd gitstory-25
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
-Open http://localhost:5173 and enter a GitHub username (try `demo`).
 
-## Scripts
-- `npm run dev`  start the dev server
-- `npm run build`  production build with Vite
-- `npm run preview`  preview the production build locally
+Open **http://localhost:5173** and enter any GitHub username!
 
-## Tech Stack
-React 19, TypeScript, Vite 6, Tailwind CSS 4, Framer Motion, Recharts, Lucide React, html-to-image, canvas-confetti.
+> 💡 **Tip:** Type `demo` to see a full experience with mock data.
 
-## Deployment
-Build with `npm run build` and deploy the `dist/` directory to Vercel (recommended), Netlify, GitHub Pages, or any static host.
+---
 
-## License
-MIT  2025 GitStory team
+## 🔐 Authentication (Optional)
+
+For enhanced features, add a GitHub Personal Access Token:
+
+1. Click **"Add GitHub Token (Optional)"** on the home page
+2. Paste your token (starts with `ghp_`)
+3. See "Connected as @username" confirmation
+
+### Benefits with Token:
+| Feature | Without Token | With Token |
+|---------|---------------|------------|
+| Rate Limit | 60/hour | **5000/hour** |
+| Private Repos | ❌ | ✅ |
+| Org Repos | ❌ | ✅ |
+| Private Contributions | ❌ | ✅ |
+
+[Create a token with correct scopes →](https://github.com/settings/tokens/new?scopes=repo,read:org,read:user&description=GitStory%202025)
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React 19** | UI Components with latest features |
+| **TypeScript** | Type-safe development |
+| **Vite 6** | Lightning-fast build tool |
+| **Tailwind CSS 4** | Utility-first styling with `@theme` config |
+| **Framer Motion** | Buttery-smooth animations |
+| **Recharts** | Beautiful, responsive charts |
+| **Lucide React** | Consistent icon system |
+| **html-to-image** | Poster PNG export |
+| **canvas-confetti** | Celebration effects 🎊 |
+
+---
+
+## 📡 API Usage
+
+### With Token (Optimized - 4 calls)
+| # | Endpoint | Purpose |
+|---|----------|---------|
+| 1 | `/users/{username}` | Basic profile info |
+| 2 | `/user/repos` | All repos (org + private) |
+| 3 | **GraphQL** | Contributions + PRs + Issues + Reviews (4-in-1!) |
+| 4 | `/users/{username}/events` | Time-of-day patterns |
+
+### Without Token (7 calls)
+| # | Endpoint | Purpose |
+|---|----------|---------|
+| 1 | `/users/{username}` | Basic profile info |
+| 2 | `/users/{username}/repos` | Repository list |
+| 3 | `github-contributions-api` | Contribution heatmap |
+| 4 | `/users/{username}/events` | Time-of-day patterns |
+| 5 | `/search/issues?q=type:pr` | PR count for 2025 |
+| 6 | `/search/issues?q=type:issue` | Issue count for 2025 |
+| 7 | `/search/issues?q=reviewed-by:` | Review count for 2025 |
+
+### Rate Limits
+
+| Type | Limit | API Efficiency |
+|------|-------|----------------|
+| Without Token | 60/hour | ~8 users/hour |
+| With Token | **5000/hour** | **~1250 users/hour** |
+
+---
+
+## 📱 Controls
+
+### Touch Gestures (Mobile)
+| Action | Effect |
+|--------|--------|
+| **Tap right 2/3** | Next slide |
+| **Tap left 1/3** | Previous slide |
+| **Hold anywhere** | Pause timer |
+| **Release** | Resume timer |
+
+### Keyboard Controls (Desktop)
+| Key | Effect |
+|-----|--------|
+| **→** or **D** | Next slide |
+| **←** or **A** | Previous slide |
+| **Space** | Pause/Resume |
+| **Escape** | Exit story |
+
+---
+
+## 🏗️ Project Structure
+
+```
+gitstory-25/
+├── index.html          # Entry point
+├── index.css           # Tailwind + custom styles
+├── index.tsx           # React root
+├── App.tsx             # Main app with landing page & token input
+├── types.ts            # TypeScript interfaces
+├── constants.ts        # Mock data & configuration
+├── vite.config.ts      # Vite configuration
+├── services/
+│   ├── githubService.ts      # GitHub API + GraphQL integration
+│   └── scoringAlgorithms.ts  # Modular scoring logic (languages, repos, archetypes)
+└── components/
+    ├── StoryContainer.tsx  # Slide navigation & gestures
+    ├── SlideLayout.tsx     # Reusable slide wrapper
+    ├── TextReveal.tsx      # Animated text component
+    └── slides/
+        ├── TitleSlide.tsx
+        ├── VelocitySlide.tsx
+        ├── GridSlide.tsx
+        ├── CompositionSlide.tsx
+        ├── RoutineSlide.tsx
+        ├── ProductivitySlide.tsx
+        ├── CommunitySlide.tsx
+        ├── LanguagesSlide.tsx
+        ├── TopReposSlide.tsx     # NEW: Top 5 repos
+        ├── RepoSlide.tsx
+        └── PosterSlide.tsx
+```
+
+---
+
+## 🚀 Build & Deploy
+
+```bash
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+Deploy the `dist/` folder to any static host:
+- **Vercel** (recommended)
+- **Netlify**
+- **GitHub Pages**
+- **Cloudflare Pages**
+
+---
+
+## 📄 License
+
+MIT © 2025
+
+---
+
+<div align="center">
+
+**Made with 💜 for developers who ship**
+
+*Star ⭐ this repo if you found it useful!*
+
+</div>
