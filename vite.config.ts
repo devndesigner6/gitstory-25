@@ -20,14 +20,6 @@ export default defineConfig(({ mode }) => {
 						},
 					},
 				},
-				// Optimize bundle
-				minify: 'terser',
-				terserOptions: {
-					compress: {
-						drop_console: true,
-					},
-				},
-				// Enable compression
 				sourcemap: false,
 			},
 			define: {
